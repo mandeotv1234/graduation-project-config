@@ -6,6 +6,11 @@ spring:
     name: user-service
   liquibase:
     change-log: classpath:db/changelog/app-changelog-master.yaml
+  management:
+  health:
+    rabbit:
+      enabled: false
+
   
   datasource:
     url: jdbc:postgresql://localhost:5433/user_service_db
